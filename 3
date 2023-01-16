@@ -1,0 +1,10 @@
+?-
+read(Mt,"segodnia mesyac M="), read(Dt,"segodnia den D="),
+read(Mr, "dney v mesyace="),nl,
+dt(Mt,Dt,Mt,Mr,Z), write(Z),nl.
+
+dt(X1,Y1,X2,Y2,Z):- 
+  X1=X2, Y1<Y2, YY=Y2-Y1, S="ostalos ", S1=" dney", S3=" do", S4=" konca",
+  S5=" mesyaca",
+  S2 is print(YY), Z=S+S2+S1+S3+S4+S5;
+  X1=X2, Y1=Y2, Z="segodnya posledniy den mesyaca!".
