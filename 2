@@ -1,0 +1,25 @@
+?-
+read(M,"vvod meciac M="), read(D,"vvod den D="),
+mn(M,_,K),T is K+D-((K+D)//7)*7,write("T="),write(T),nl,dn(T,Z),
+write("den nedeli= "),write(Z),nl.
+
+mn(1,"yanvar",2).
+mn(2,"fevral",5).
+mn(3,"mart",6).
+mn(4,"aprel",2).
+mn(5,"mai",4).
+mn(6,"iun",0).
+mn(7,"iul",2).
+mn(8,"avgust",5).
+mn(9,"sentybr",1).
+mn(10,"oktybr",3).
+mn(11,"noybr",6).
+mn(12,"dekabr",1).
+dn(T,Z) :-
+T=1,Z="ponedelnik";
+T=2,Z="vtornik";
+T=3,Z="sreda";
+T=4,Z="chetverg";
+T=5,Z="pytnica";
+T=6,Z="subbota";
+T=7,Z="voskresenie".
