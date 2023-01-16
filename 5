@@ -1,0 +1,30 @@
+?- 
+read(A,"vvod A="),read(B,"vvod B="),read(C,"vvod C="), 
+read(D,"vozrastayet=1 ubyvayet=2"), 
+
+s(D,A,B,C). 
+s(D,A,B,C):- 
+D=1,A=<B,B=<C,Z=print(A)+" "+print(B)+" "+print(C)+" ", 
+write(Z),nl; 
+D=1,A=<C,C=<B,Z=print(A)+" "+print(C)+" "+print(B)+" ", 
+write(Z),nl; 
+D=1,C=<A,A=<B,Z=print(C)+" "+print(A)+" "+print(B)+" ", 
+write(Z),nl; 
+D=1,C=<B,B=<A,Z=print(C)+" "+print(B)+" "+print(A)+" ", 
+write(Z),nl; 
+D=1,B=<A,A=<C,Z=print(B)+" "+print(A)+" "+print(C)+" ", 
+write(Z),nl; 
+D=1,B=<C,C=<A,Z=print(B)+" "+print(C)+" "+print(A)+" ", 
+write(Z),nl; 
+D=2,A>=B,B>=C,Z=print(A)+" "+print(B)+" "+print(C)+" ", 
+write(Z),nl; 
+D=2,A>=C,C>=B,Z=print(A)+" "+print(C)+" "+print(B)+" ", 
+write(Z),nl; 
+D=2,C>=A,A>=B,Z=print(C)+" "+print(A)+" "+print(B)+" ", 
+write(Z),nl; 
+D=2,C>=B,B>=A,Z=print(C)+" "+print(B)+" "+print(A)+" ", 
+write(Z),nl; 
+D=2,B>=A,A>=C,Z=print(B)+" "+print(A)+" "+print(C)+" ", 
+write(Z),nl; 
+D=2,B>=C,C>=A,Z=print(B)+" "+print(C)+" "+print(A)+" ", 
+write(Z),nl.
