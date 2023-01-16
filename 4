@@ -1,0 +1,35 @@
+?- 
+read(Dt,"den rojdeniya D="), read(Mt,"meciac rojdeniya M="),nl, 
+dt(Dt,Mt,Z), write(Z),nl. 
+
+dt(X,Y,Z) :- 
+X>21, Y=03, Z="Znak zodiaka Oven"; 
+X<20, Y=04, Z="Znak zodiaka Oven"; 
+X>21, Y=04, Z="Znak zodiaka Telec"; 
+X<20, Y=05, Z="Znak zodiaka Telec"; 
+X>21, Y=05, Z="Znak zodiaka Blizneci"; 
+X<21, Y=06, Z="Znak zodiaka Blizneci"; 
+X>22, Y=06, Z="Znak zodiaka Rak"; 
+X<22, Y=07, Z="Znak zodiaka Rak"; 
+X>23, Y=07, Z="Znak zodiaka Lev"; 
+X<23, Y=08, Z="Znak zodiaka Lev"; 
+X>24, Y=08, Z="Znak zodiaka Deva"; 
+X<23, Y=09, Z="Znak zodiaka Deva"; 
+X>24, Y=09, Z="Znak zodiaka Veci"; 
+X<23, Y=10, Z="Znak zodiaka Veci"; 
+X>24, Y=10, Z="Znak zodiaka Scorpion"; 
+X<22, Y=11, Z="Znak zodiaka Scorpion"; 
+X>23, Y=11, Z="Znak zodiaka Strelec"; 
+X<21, Y=12, Z="Znak zodiaka Strelec"; 
+X>22, Y=12, Z="Znak zodiaka Kozerog"; 
+X<20, Y=01, Z="Znak zodiaka Kozerog"; 
+X>21, Y=01, Z="Znak zodiaka Vodoley"; 
+X<20, Y=02, Z="Znak zodiaka Vodoley"; 
+X>21, Y=02, Z="Znak zodiaka Riba"; 
+X<20, Y=03, Z="Znak zodiaka Riba"; 
+
+
+
+YY=X2-X1, S="ostalos ", S1="dney", 
+S2 is print(YY), Z=S+S2+S1; 
+X1>X2, Z="nepravilno vvedena data!".
