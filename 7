@@ -1,0 +1,17 @@
+?-
+read(A,"vvod A="),read(B,"vvod B="),read(C,"vvod C="),
+s(A,B,C).
+
+s(A,B,C) :-
+A>=B,B>=C,Z=print(C)+" "+print(B)+" "+print(A)+" ",
+write("v poryadke vozrastaniya:"),write(Z),nl;
+A>=C,C>=B,Z=print(B)+" "+print(C)+" "+print(A)+" ",
+write("v poryadke vozrastaniya:"),write(Z),nl;
+C>=A,A>=B,Z=print(B)+" "+print(A)+" "+print(C)+" ",
+write("v poryadke vozrastaniya:"),write(Z),nl;
+C>=B,B>=A,Z=print(A)+" "+print(B)+" "+print(C)+" ",
+write("v poryadke vozrastaniya:"),write(Z),nl;
+B>=C,C>=A,Z=print(A)+" "+print(C)+" "+print(B)+" ",
+write("v poryadke vozrastaniya:"),write(Z),nl;
+B>=A,A>=C,Z=print(C)+" "+print(A)+" "+print(B)+" ",
+write("v poryadke vozrastaniyaiya:"),write(Z),nl.
